@@ -1,6 +1,10 @@
+int ERROR = 0;
+
 float spindleX = 60.0;
 float spindleOffset = 90.0;
 float spoutOffset = 60.0;
+
+float stopX = 60.0;
 
 float feedRate = 0.0;
 float speedRate = 0.0;
@@ -28,7 +32,9 @@ void reference() //references the axes
 
 void calculate() //calculate the switch points on the x axis
 {
-		
+	stopX = cycleLength + cycleOffset;
+	if( stopX > spindleX ){ERROR = 1;}
+
 }
 
 void setup()
