@@ -14,8 +14,7 @@ bool isRunning = FALSE; //whether prgm is running
 
 int FeedPotPin = 0;
 int SpeedPotPin = 0;
-int CycOffUpBtnPin = 0;
-int CycOffDownBtnPin = 0;
+int CycOffPotPin = 0;
 int RefBtnPin = 0;
 int RunBtnPin = 0;
 
@@ -23,11 +22,6 @@ void reference() //references the axes
 {
 
 	isReferenced = TRUE;		
-}
-
-void write()
-{
-
 }
 
 void calculate() //calculate the switch points on the x axis
@@ -61,7 +55,6 @@ void loop()
 	{
 		;//retrieve data
 		write(feed, speed, cyclen, cycoff, feeding, loading, ref, run);//write data
-		; //print stuff to screen
 		if(ERROR ==0 && isReferenced == FALSE)
 		{
 			reference();
