@@ -1,20 +1,20 @@
 int ERROR = 0;
 
-float bedLen = 0.0;
+float bedLen = 12.0;
 float maxSpeed = 100.0;
 
-float stopX = 60.0;
+float stopX = 12.0;
 
 float feedRate = 0.0;
 float speedRate = 0.0;
-float cycleOffset = 10.0;
+float bedOffset = 2.0;
 
 bool isReferenced = FALSE; // whether the machine is referenced
 bool isRunning = FALSE; //whether prgm is running
 
 int FeedPotPin = 0;
 int SpeedPotPin = 0;
-int CycO ffUpBtnPin = 0;
+int CycOffUpBtnPin = 0;
 int CycOffDownBtnPin = 0;
 int RefBtnPin = 0;
 int RunBtnPin = 0;
