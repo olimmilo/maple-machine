@@ -1,4 +1,4 @@
-﻿int ERROR = 0;
+int ERROR = 0;
 
 float spindleX = 60.0;
 float maxA = 1000.0;
@@ -25,6 +25,7 @@ int fillingPin = 0;
 int loadingPin = 0;
 int referencePin = 0;
 int runningPin = 0;
+int stopPin = 0;
 
 void reference() //references the axes
 {
