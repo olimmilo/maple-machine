@@ -7,7 +7,7 @@ float stopX = 12.0;
 
 float feedRate = 0.0;
 float speedRate = 0.0;
-float bedOffset = 2.0;
+float bedOffset = 6.0;
 
 bool isReferenced = FALSE; // whether the machine is referenced
 bool isRunning = FALSE; //whether prgm is running
@@ -17,6 +17,8 @@ int SpeedPotPin = 0;
 int CycOffPotPin = 0;
 int RefBtnPin = 0;
 int RunBtnPin = 0;
+int SpindleMotorPin = 0;
+int BedMotorPin = 0;
 
 void reference() //references the axes
 {
@@ -39,6 +41,11 @@ void run()
 
 }
 
+void stop()
+{
+	
+}
+
 void setup()
 {
 	
@@ -48,7 +55,7 @@ void loop()
 {
 	if( ERROR =! 0 )
 	{
-		; //print error
+		stop();
 	}
 
 	if( ERROR == 0 )
